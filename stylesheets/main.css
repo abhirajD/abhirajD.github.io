@@ -1,128 +1,107 @@
-* { box-sizing: border-box; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; margin: 0; padding: 0; tap-highlight-color:rgba(0,0,0,0); }
+@import "//fonts.googleapis.com/css?family=Cutive";
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
 body {
-  position: absolute;
-  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
   height: 100%;
-  background-color: #F0F0F0;
-  font-family: Courier, monospace;
-  font-style: normal;
-  font-weight: 100;
-  color: #202020;
-  font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  max-width: 20em;
-  width: 100%;
-  height: 10em;
-  margin: -5em -10em;
-  text-align: center;
+
+body {
+  font-family: "Cutive", serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #222;
+  background-color: #ededed;
+  -webkit-transition: background-color 150ms ease-out, color 150ms ease-out;
+  transition: background-color 150ms ease-out, color 150ms ease-out;
 }
-a { 
-  text-decoration: none;
+
+.dark {
+  color: #ededed;
+  background-color: #222;
+}
+
+/*a {
   color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:focus, a:hover {
+  -webkit-box-shadow: inset 0 -8px 0 #c92b2b;
+          box-shadow: inset 0 -8px 0 #c92b2b;
 }
 
-h1 a {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  opacity: 0;
-  width: 1em;
-  height: 1em;
+p {
+  opacity: .6;
+  margin: 0 0 .6rem 0;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+p:hover {
+  opacity: 1;
+}*/
+
+.scene {
+  padding: 6rem 2rem;
+  max-width: 800px;
   margin: 0 auto;
-  background-color: #303132;
-  font-size: 3em;
-  line-height: 3em;
-  color: transparent;
-  border-radius: 50%;
-  border: 0em solid #39F;
-  transition: all .15s ease-in-out;
-  animation: logo .25s ease-out 2.4s 1 normal forwards;
 }
 
-h1 a:hover, h1 a:focus { background-color: #39F; }
-h1 a:active { transform: scale(0.8); }
-
-@keyframes logo {
-  0%   { transform: rotate(25deg) scale(.01); opacity: 0; }
-  70%  { transform: scale(1.4); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+.actor {
+  font-size: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.actor:last-of-type {
+  margin-bottom: 6rem;
 }
 
-h1 em {
-  position: absolute;
-  display: block;
-  top: .5em;
-  left: .4375em;
-  font-size: .5em;
-  line-height: 1em;
-  color: #FFF;
-  font-family: 'Oleo Script', Helvetica, sans-serif;
-  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+.actor__content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-h1 em:last-child {
-  top: .5em;
-  left: 1em;
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-h2 {
-  display: block;
-  height: 1.5em;
-  margin: 1.5em 0;
-  color: #606060;
-  line-height: 1.25em;
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-hr {
-  position: relative;
-  width: 4em;
-  height: 1px;
-  background: #202020;
-  margin: 1em auto;
-}
-.slogan {
-  position: relative;
-  display: block;
-  overflow: hidden; 
-  width: 0em;
-  height: 1.25em;
-  margin: 1em auto;
-  font-size: 2em;
-  line-height: 1.5em;
-  border-right: .125em solid #39F;
-  box-sizing: content-box;
-  animation-name: blink-start, typing, blink-end;
-  animation-duration: 1s, 1s, 1s;
-  animation-timing-function: linear, steps(13, end), linear;
-  animation-delay: 0s, 1s, 2s;
-  animation-iteration-count: 1, 1, infinite;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
+.actor__content--typing::after {
+  content: '|';
+  -webkit-animation: blink 500ms infinite;
+          animation: blink 500ms infinite;
 }
 
-.slogan span {
-  display: block;
-  width: 8em;
-}
 
-@keyframes typing {
-  from { width: 0em; }
-  to   { width: 8em; }
-}
-
-@keyframes blink-start {
-  from, to { border-color: #39F; }
-  50% { border-color: transparent; }
-}
-
-@keyframes blink-end {
-  from, to { border-color: #39F; }
-  50% { border-color: transparent; }
-}
 .contact {
   position: relative;
   width: 20em;
