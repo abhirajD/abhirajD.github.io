@@ -1,67 +1,40 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
-    color: white;
-    background-color: #121212;
-    line-height: 1.6;
+    color: #fff;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Landing Page Styles */
 header {
+    background: #222;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
     text-align: center;
-    padding: 50px 0;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-header p {
+nav ul li a {
+    color: white;
+    text-decoration: none;
     font-size: 1.2em;
-    color: #30c3a6; /* Accent Color */
 }
 
-/* Resume Section Styles */
 section {
     padding: 20px;
-    border-bottom: 1px solid #333;
-}
-
-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-/* Blog Section Styles */
-#blog article {
-    margin-bottom: 20px;
-}
-
-#blog h3 {
-    font-size: 1.4em;
-    color: #30c3a6; /* Accent Color */
-}
-
-/* Footer Styles */
-footer {
     text-align: center;
-    padding: 20px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    section h2 {
-        font-size: 1.5em;
-    }
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
