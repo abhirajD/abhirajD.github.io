@@ -229,25 +229,25 @@ nav #menu li a:hover {
 
 /*--------------- hero section --------------- */
 .hero {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hero h1 {
-	font-weight: lighter;
-	text-align: center;
-	letter-spacing: -2px;
-	line-height: 58px;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 58px;
 }
 
 @media (max-width: 768px) {
-	.header h1 {
-		font-size: 26px;
-    margin-bottom: 20px; /* Adjust this value to increase/decrease space between lines */
-
-	}
+  .header h1 {
+      font-size: 26px;
+      margin-bottom: 20px; /* Adjust this value to increase/decrease space between lines */
+  }
 }
 
 .tagline-container {
@@ -258,17 +258,19 @@ nav #menu li a:hover {
 }
 
 .data_reveal {
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   font-size: 26px;
-  letter-spacing: 12px;
+  letter-spacing: 1px; /* Reduced letter-spacing for better readability */
   font-weight: 600;
-  position: absolute;
-  top: 70%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  position: relative; /* Changed to relative for better positioning */
+  top: 0;
+  left: 0;
+  transform: translate(0, 0); /* Reset transform */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Added margin for spacing */
+  white-space: nowrap; /* Ensure the text stays in one line */
 }
-
 
 /*--------------- scroll down icon animation --------------- */
 .scroll-down {

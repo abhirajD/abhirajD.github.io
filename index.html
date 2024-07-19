@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 	<link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
 	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
@@ -48,28 +49,29 @@
             </ul>
         </div>
 
-        <div class="hero" id="home">
-            <div class="header">
-                <h1 class="line anim-typewriter">Trying to make computers think like humans.</h1>
-            </div>
-			<div class="container">
-				<div class="data_reveal">
-				        \t And decode humans like computers.
+		<div class="hero" id="home">
+			<div class="tagline-container">
+				<div class="header">
+					<h1 class="line anim-typewriter">Trying to make computers think like humans.</h1>
+				</div>
+				
+				<div class="data-container">
+					<div class="data_reveal">
+						And decode humans like computers.
+					</div>
 				</div>
 			</div>
 			<script type="text/javascript">
-
 				const text = baffle(".data_reveal");
 				text.set({
-						characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
-						speed: 120
+					characters: '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+					speed: 120
 				});
 				text.start();
-				text.reveal(4000, 3000);
-		
+				text.reveal(8000, );
 			</script>
-        </div>
-
+		</div>
+		
         <!-- <div class="scroll-down"></div> -->
 
         <!-- <div class="container-fluid" id="projects">
