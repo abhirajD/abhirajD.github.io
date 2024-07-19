@@ -615,3 +615,33 @@ textarea:focus {
 .next p {
 	text-align: right;
 }
+
+.contact {
+  margin-top: 10px;
+}
+
+.contact a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #dfdfdf;
+}
+
+.icon-twitter, .icon-facebook, .icon-linkedin, .icon-github {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* You may need to replace these URLs with the actual paths to your icon images */
+.icon-twitter { background-image: url('path/to/twitter-icon.png'); }
+.icon-facebook { background-image: url('path/to/facebook-icon.png'); }
+.icon-linkedin { background-image: url('path/to/linkedin-icon.png'); }
+.icon-github { background-image: url('path/to/github-icon.png'); }
