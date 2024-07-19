@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js@1.5.5/t.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
 	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
@@ -24,7 +25,8 @@
             </span>
 
             <ul id="menu">
-                <li><a href="#home">home<span>.</span></a></li>
+                <li><a href="#home">[WEBSITE IN DEV]<span>.</span></a></li>
+				<li><a href="#home">home<span>.</span></a></li>
                 <li><a href="#projects">projects<span>.</span></a></li>
                 <li><a href="#about">about me<span>.</span></a></li>
                 <li><a href="#contact">contact<span>.</span></a></li>
@@ -48,11 +50,27 @@
 
         <div class="hero" id="home">
             <div class="header">
-                <h1 class="line anim-typewriter">I read brain and code stuff.</h1>
+                <h1 class="line anim-typewriter">Trying to make computers think like humans.</h1>
             </div>
+			<div class="container">
+				<div class="data_reveal">
+				        \t And decode humans like computers.
+				</div>
+			</div>
+			<script type="text/javascript">
+
+				const text = baffle(".data_reveal");
+				text.set({
+						characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+						speed: 120
+				});
+				text.start();
+				text.reveal(4000, 3000);
+		
+			</script>
         </div>
 
-        <div class="scroll-down"></div>
+        <!-- <div class="scroll-down"></div> -->
 
         <!-- <div class="container-fluid" id="projects">
             <br><br><br>
@@ -139,7 +157,7 @@
 
                         <div class="col-lg-4" id="address">
                             <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">abhiraj.darshankargmail.com</h4>
+                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">abhiraj.darshankar@gmail.com</h4>
                             <br><br>
                         </div>
                     </div>
