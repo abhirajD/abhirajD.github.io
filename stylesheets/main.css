@@ -22,7 +22,7 @@ body {
 
 /*--------------- typewriter effect --------------- */
 .line {
-  width: 0; /* Start with 0 width */
+  width: 24; /* Start with 0 width */
   top: 50%;
   margin: auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -272,7 +272,7 @@ nav #menu li a:hover {
   white-space: nowrap; /* Ensure the text stays in one line */
   opacity: 0; /* Initially hidden */
   animation: fadeIn 1s forwards; /* Fade-in effect */
-  animation-delay: 5s; /* Delay for the fade-in */
+  animation-delay: 2s; /* Delay for the fade-in */
 }
 
 @keyframes fadeIn {
