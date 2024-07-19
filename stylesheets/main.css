@@ -22,48 +22,48 @@ body {
 
 /*--------------- typewriter effect --------------- */
 .line {
-	width: 24em;
-	top: 50%;
-	margin: auto;
-	border-right: 2px solid rgba(255, 255, 255, 0.75);
-	text-align: center;
-	white-space: nowrap;
-	overflow: hidden;
-	transform: translateY(-50%);
+  width: 0; /* Start with 0 width */
+  top: 50%;
+  margin: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
 }
 
 .anim-typewriter {
-	animation: typewriter 4s steps(40) 1s 1 normal both,
-		blinkTextCussor 500ms steps(40) infinite normal;
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+      blinkTextCursor 500ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
-	from {
-		width: 0;
-	}
-	to {
-		width: 18em;
-	}
+  from {
+      width: 0;
+  }
+  to {
+      width: 30em; /* Adjusted to match the full length of the text */
+  }
 }
 
 @media (max-width: 768px) {
-	@keyframes typewriter {
-		from {
-			width: 0;
-		}
-		to {
-			width: 17em;
-		}
-	}
+  @keyframes typewriter {
+      from {
+          width: 0;
+      }
+      to {
+          width: 22em; /* Adjusted to match the full length of the text on smaller screens */
+      }
+  }
 }
 
-@keyframes blinkTextCussor {
-	from {
-		border-right-color: rgba(255, 255, 255, 0.75);
-	}
-	to {
-		border-right-color: transparent;
-	}
+@keyframes blinkTextCursor {
+  from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+      border-right-color: transparent;
+  }
 }
 
 /*--------------- navigation --------------- */
@@ -270,6 +270,15 @@ nav #menu li a:hover {
   text-align: center; /* Center the text */
   margin-top: 20px; /* Added margin for spacing */
   white-space: nowrap; /* Ensure the text stays in one line */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards; /* Fade-in effect */
+  animation-delay: 5s; /* Delay for the fade-in */
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
 }
 
 /*--------------- scroll down icon animation --------------- */
